@@ -1,0 +1,467 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* تنظیمات کلی و چند کلاس پیش ساخته  */
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 2rem;
+    width: 4rem;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn a {
+    font-size: 16px;
+    color: rgb(31, 31, 31) !important;
+}
+
+.white-btn {
+    background-color: rgb(195, 190, 190);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.gray-btn {
+    background-color: rgb(164, 164, 164);
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.gray-btn:hover {
+    background-color: #464242;
+}
+
+.white-btn:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.blue-btn {
+    background-color: rgb(73, 173, 212);
+    transition: background-color 0.12s ease-in-out;
+    color: #fff;
+}
+
+.blue-btn:hover {
+    background-color: rgb(51, 138, 173);
+}
+
+.big-btn {
+    padding: 0.9rem 3rem;
+    width: 9rem;
+}
+
+.oltra-btn {
+    width: 15rem;
+    padding: 0.9rem;
+}
+
+.bg-red {
+    background-color: #c32156;
+}
+
+.bg-green {
+    background-color: #a8dd3a;
+}
+
+.bg-blue {
+    background-color: #3faccd;
+}
+
+.title {
+    color: #474747;
+    font-size: 40px;
+    padding: 1rem 0;
+}
+
+.texts {
+    font-size: 18px;
+    color: #464242;
+}
+
+.line {
+    width: 94%;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    height: 0.03rem;
+    background-color: rgb(176, 176, 176);
+    border: none;
+}
+
+
+/* شروع بخش هدر سایت  */
+
+header {
+    background-image: url(../images/bokeh_car_lights_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    height: 500px;
+}
+
+.header-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 28, 28, 0.8);
+    z-index: -1;
+}
+
+.header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+.header-menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.header-menu li {
+    margin: 0 1rem;
+    font-size: 20px;
+    color: #fff;
+}
+
+.header-menu li a {
+    opacity: 1;
+    transition: color 0.4s ease-in-out;
+    color: rgb(149, 148, 148);
+    font-weight: 500;
+}
+
+.header-menu li a:hover {
+    color: #fff;
+}
+
+.header-menu-names {
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.header-menu-names:hover {
+    text-decoration: underline;
+}
+
+
+/* هدر اصلی و بخش معرفی سایت  */
+
+.header-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 10rem 0;
+}
+
+.main-introduce {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.group-name {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.header-burger-menu {
+    color: #fff;
+    background-color: rgba(152, 33, 33, 0);
+    border: none;
+    font-size: 2rem;
+    display: none;
+}
+
+
+/* ریسپانسیو هدر  */
+
+@media (max-width:919.8px) {
+    .header-menu li {
+        margin: 0 0.5rem;
+    }
+    .header-menu li a {
+        font-size: 16px;
+    }
+    .header-menu-names {
+        font-size: 1.7rem;
+    }
+}
+
+@media(max-width:719.8px) {
+    .header-top {
+        align-items: flex-start;
+    }
+    .header-burger-menu {
+        display: block;
+        z-index: 10;
+    }
+    .header-menu {
+        background-color: #474747;
+        height: 100vh;
+        position: relative;
+        position: fixed;
+        top: 0;
+        padding-top: 2.5rem;
+        right: -256;
+        width: 30%;
+        flex-direction: column;
+        transition: all 0.3s ease-in-out;
+    }
+    .header-menu li {
+        margin-top: 1.5rem;
+    }
+    .header-top {
+        background-color: rgba(89, 84, 84, 0.4);
+        padding: 1rem;
+        position: fixed;
+        top: 0.5rem;
+        left: 0;
+        right: 0;
+    }
+}
+
+@media (max-width:692.98px) {
+    .main-introduce {
+        font-size: 1.6rem;
+    }
+    .header-menu-names {
+        font-size: 1.4rem;
+    }
+    .group-name {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* درست کردن بخش اصلی سایت  */
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10rem;
+    background-color: rgba(233, 232, 232, 0.882);
+}
+
+.services-title {
+    padding: 3rem;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+}
+
+.service-box {
+    flex-basis: 23rem;
+    height: 24rem;
+    border-radius: 0.5rem;
+    margin: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fff;
+    text-align: center;
+}
+
+.service-box i {
+    font-size: 35px;
+    border-radius: 100%;
+    padding: 30px;
+    width: 2.5rem;
+    color: #fff;
+}
+
+.services-captions {
+    width: 80%;
+}
+
+.services-captions h3 {
+    color: #474747;
+    padding-bottom: 1rem;
+}
+
+.services-captions p {
+    color: #464242;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+
+/* بخش درباره ی یوزر ها  */
+
+.about {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.about-top {
+    padding: 3.5rem 0;
+}
+
+.about-middle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2.5rem 0;
+}
+
+.user-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 17rem;
+    margin: 1.5rem;
+}
+
+.user-box i {
+    font-size: 5rem;
+    color: #a4a3a3;
+    background-color: rgb(238, 238, 238);
+    border-radius: 100%;
+    padding: 1rem 1.5rem;
+}
+
+.user-info-title {
+    margin-bottom: 0.5rem;
+    color: #323131;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.user-info-text {
+    color: #1a1919;
+}
+
+.about-bottom {
+    padding: 2.5rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-bottom-text {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+.bottom-text {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+
+/* بخش تماس و نظرات سایت  */
+
+.contact {
+    background-color: #3cadd4;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact-form {
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.contact-form input {
+    width: 19.5%;
+    padding: 0.8rem 0.3rem;
+    margin: 1rem 0.3rem 0 0.3rem;
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+.contact-form textarea {
+    width: 40%;
+    height: 7rem;
+    margin-top: 1rem;
+    padding: 0.8rem 0.3rem;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    resize: none;
+}
+
+.contact-form button {
+    margin-top: 2rem;
+}
+
+
+/* ریسپانسیو سازی بخش اصلی سایت  */
+
+@media (max-width:1295.9px) {
+    .service-box {
+        flex-basis: 19rem;
+    }
+    .user-box {
+        flex-basis: 15rem;
+    }
+}
+
+@media (max-width:1151.9px) {
+    .service-box {
+        flex-basis: 22rem;
+    }
+    .user-box {
+        flex-basis: 20rem;
+        justify-content: space-evenly;
+    }
+}
+
+@media(max-width:751.9px) {
+    .title {
+        font-size: 1.4rem;
+        font-weight: 1000;
+    }
+    .texts {
+        font-size: 1rem;
+    }
+    .contact-form input {
+        width: 70%;
+    }
+    .contact-form textarea {
+        width: 70%;
+    }
+}
